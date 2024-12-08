@@ -1,0 +1,433 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Logo */
+.logo {
+  font-weight: bold; /* Membuat teks logo menjadi tebal */
+  font-family: 'Arial', sans-serif; 
+  font-size: 1.5rem; /* Ukuran font logo */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #1a1a1a;
+  background: #f5f5f5;
+}
+
+header {
+  background: linear-gradient(90deg, #cc9d9d, #806340);
+  color: #f0f0f0;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #444;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #31475d, #296d6d);
+  color: #f0f0f0;
+  padding: 0 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: fade-in 1.5s ease-in-out;
+}
+
+.hero .btn {
+  background: #ffc176;
+  color: #f0f0f0;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+}
+
+.hero .btn:hover {
+  background: #ff7676;
+}
+
+/* Tentang Saya */
+.about, .projects, .contact {
+  background: #f5f5f5;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.about h2, .projects h2, .contact h2 {
+  font-size: 2rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.about p, .projects p, .contact p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Tentang Saya */
+.about {
+  background: #f5f5f5;
+  padding: 3rem 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 5rem;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.about:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  color: #0a0a0a;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1;
+  text-align: justify;
+  margin-right: 1rem; /* Spasi antara teks dan foto */
+}
+
+.about-photo {
+  flex: 0 0 45%; /* Porsi foto lebih kecil */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-photo img {
+  width: 80%;
+  height: auto;
+  border-radius: 10px; /* Membuat foto dengan sudut membulat */
+  border: none; /* Menghilangkan bingkai */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan halus */
+}
+
+/* Mengatur ukuran foto menjadi persegi agak panjang */
+.about-photo img {
+  width: 50%; /* Atur lebar foto */
+  height: auto; /* Tinggi otomatis untuk menjaga proporsi */
+}
+
+/* Proyek Saya */
+.projects {
+  background: #f5faff;
+  padding: 4rem 2rem;
+}
+
+.projects h2 {
+  font-size: 2.8rem;
+  color: #080808;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+.project-full {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: #ffffff;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: center;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.project-card h3 {
+  font-size: 2rem;
+  color: #0c0c0c;
+  margin-bottom: 1rem;
+}
+
+.project-card p {
+  font-size: 1.2rem;
+  color: #606060;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.project-card video {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-card .custom-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.project-card .btn {
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background 0.3s ease-in-out;
+}
+
+.project-card .drive {
+  background: #359efc;
+}
+
+.project-card .drive:hover {
+  background: #4ba8fc;
+}
+
+/* Kontak */
+.contact {
+  background: #f5f5f5;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  color: #ff7676;
+  margin-bottom: 2rem;
+}
+
+.contact-box {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  background: #f7f7f7;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 200px;
+  max-width: 100%; /* Menambahkan max-width */
+  word-wrap: break-word; /* Memastikan teks panjang terputus */
+}
+
+.contact-item i {
+  font-size: 2rem;
+  color: #ff7676;
+  margin-bottom: 1rem;
+}
+
+.contact-item p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.phone-icon::before {
+  content: "📞";
+}
+
+.email-icon::before {
+  content: "✉️";
+}
+
+/* Animasi */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #444;
+  color: #f0f0f0;
+  padding: 1rem;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Sembunyikan menu pada layar kecil */
+  }
+  .nav-links.active {
+    display: block; /* Tampilkan menu ketika aktif */
+  }
+
+  .nav-toggle {
+      display: block;
+  }
+
+  .hero h1 {
+      font-size: 2.5rem;
+  }
+
+  .hero p {
+      font-size: 1rem;
+  }
+
+  .project-card {
+      width: 90%;
+  }
+}
+
+.Materi {
+  text-align: justify; /* Rata kanan-kiri */
+  margin: 20px; /* Jarak dari ujung */
+  padding: 15px; /* Jarak di dalam elemen */
+  border: 1px solid #d9d9d9; /* Garis batas */
+  border-radius: 8px; /* Sudut melengkung */
+  background-color: #f7f7f7; /* Warna latar belakang */
+}
+
+.Materi h3 {
+  margin-bottom: 10px; /* Jarak bawah untuk judul */
+}
+
+.Materi p {
+  line-height: 1.6; /* Jarak antar baris */
+}
+
+.Materi ul {
+  list-style-type: disc; /* Tipe daftar */
+  padding-left: 20px; /* Jarak kiri untuk daftar */
+  margin-top: 10px; /* Jarak atas untuk daftar */
+}
+
+.Materi li {
+  margin-bottom: 5px; /* Jarak bawah untuk setiap item daftar */
+}
+
+.contact {
+  padding: 2rem 1rem;
+  background: #fff;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact input, 
+.contact textarea, 
+.contact button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact textarea {
+  resize: vertical;
+}
+
+.contact button {
+  background: #007BFF;
+  color: #fff;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background: #0056b3;
+}
